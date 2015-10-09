@@ -1,0 +1,564 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (4dca638c).
+//
+// e:\workspace\hf-soft\safethrough\debug\jitcomvctk_s.tlh
+//
+// C++ source equivalent of Win32 type library JITComVCTK_S.dll
+// compiler-generated file created 09/09/15 at 21:14:46 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace JITComVCTKExLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("1a5e021e-89a4-4f33-89b5-030e76582645"))
+/* LIBID */ __JITComVCTKExLib;
+struct /* coclass */ JITVCTKEx;
+struct __declspec(uuid("e6fd206a-d6a8-489a-b42a-0b187da52679"))
+/* dual interface */ IJITVCTKEx;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IJITVCTKEx, __uuidof(IJITVCTKEx));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b0ef56ad-d711-412d-be74-a751595f3633"))
+JITVCTKEx;
+    // [ default ] interface IJITVCTKEx
+
+struct __declspec(uuid("e6fd206a-d6a8-489a-b42a-0b187da52679"))
+IJITVCTKEx : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    unsigned long Initialize (
+        _bstr_t bstrAuxParam );
+    unsigned long Finalize ( );
+    unsigned long SetCertEx (
+        _bstr_t bstrCertStoreType,
+        _bstr_t bstrCertType,
+        _bstr_t bstrDN,
+        _bstr_t bstrSN,
+        _bstr_t bstrEmail,
+        _bstr_t bstrDNIssuer,
+        _bstr_t bstrCertBase64 );
+    unsigned long SetCert (
+        _bstr_t bstrCertType,
+        _bstr_t bstrDN,
+        _bstr_t bstrSN,
+        _bstr_t bstrEmail,
+        _bstr_t bstrDNIssuer,
+        _bstr_t bstrCertBase64 );
+    unsigned long SetAlgorithm (
+        _bstr_t bstrHashAlg,
+        _bstr_t bstrEncAlg );
+    unsigned long SetCertChooseType (
+        long nType );
+    unsigned long GetErrorCode ( );
+    _bstr_t GetErrorMessage (
+        unsigned long lErrorCode );
+    _bstr_t P1Sign (
+        _bstr_t bstrDN,
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    _bstr_t P1SignStr (
+        _bstr_t bstrDN,
+        _bstr_t bstrSrc );
+    _bstr_t AttachSign (
+        _bstr_t bstrDN,
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    _bstr_t AttachSignStr (
+        _bstr_t bstrDN,
+        _bstr_t bstrSrc );
+    _bstr_t DetachSign (
+        _bstr_t bstrDN,
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    _bstr_t DetachSignStr (
+        _bstr_t bstrDN,
+        _bstr_t bstrSrc );
+    _bstr_t GetCertInfo (
+        _bstr_t bstrCertType,
+        long lInfoType,
+        _bstr_t bstrOID );
+    _bstr_t EncryptEnvelop (
+        _bstr_t bstrDN,
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    _bstr_t EncryptEnvelopStr (
+        _bstr_t bstrDN,
+        _bstr_t bstrSrc );
+    unsigned long DecryptEnvelop (
+        _bstr_t bstrEnvelop );
+    _bstr_t GetData ( );
+    unsigned long GetDataEx (
+        unsigned char * pszSrcData,
+        unsigned long * plSrcDataLen );
+    _bstr_t GetCertListEx (
+        _bstr_t bstrCertStoreType,
+        _bstr_t bstrCertType,
+        _bstr_t bstrCertDN,
+        _bstr_t bstrCertSN,
+        _bstr_t bstrCertEmail,
+        _bstr_t bstrCertIssuerDN,
+        long lInfoType );
+    _bstr_t GetCertList (
+        _bstr_t bstrCertType,
+        _bstr_t bstrCertDN,
+        _bstr_t bstrCertSN,
+        _bstr_t bstrCertEmail,
+        _bstr_t bstrCertIssuerDN,
+        long lInfoType );
+    _bstr_t AttachSignEx (
+        _bstr_t bstrDN,
+        _bstr_t bstrFileName,
+        _bstr_t bstrFileNameOut );
+    _bstr_t DetachSignEx (
+        _bstr_t bstrDN,
+        _bstr_t bstrFileName,
+        _bstr_t bstrFileNameOut );
+    unsigned long SetFileNameUseUTF8 (
+        short isUTF8 );
+    _bstr_t ChangeCertDN (
+        _bstr_t bstrCertDN,
+        unsigned short usChangeFlag );
+    unsigned long SetBlockSize (
+        unsigned long lBlockSize );
+    _bstr_t GetBase64Encode (
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    unsigned long GetBase64Decode (
+        _bstr_t bstrBase64Data,
+        unsigned char * pszSrcData,
+        unsigned long * pSrcDataLen );
+    unsigned long SetCSP (
+        _bstr_t bstrProvider );
+    _bstr_t EncryptEnvelopEx (
+        _bstr_t bstrDN,
+        _bstr_t bstrFileName,
+        _bstr_t bstrFileNameOut );
+    unsigned long DecryptEnvelopEx (
+        _bstr_t bstrFileName );
+    _bstr_t GetFile (
+        _bstr_t bstrFileSavePath );
+    unsigned long VerifyAttachedSign (
+        _bstr_t bstrSignedData );
+    unsigned long VerifyAttachedSignEx (
+        _bstr_t bstrFileNameAttached );
+    _bstr_t CreateSignedEnvelop (
+        _bstr_t bstrSignCertDN,
+        _bstr_t bstrEncCertDN,
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    _bstr_t CreateSignedEnvelopStr (
+        _bstr_t bstrSignCertDN,
+        _bstr_t bstrEncCertDN,
+        _bstr_t bstrSrc );
+    unsigned long VerifySignedEnvelop (
+        _bstr_t bstrEnvelop );
+    unsigned long VerifyDetachedSign (
+        _bstr_t bstrSignedData,
+        unsigned char * pszSrcData,
+        unsigned long lSrcDataLen );
+    unsigned long VerifyDetachedSignStr (
+        _bstr_t bstrSignedData,
+        _bstr_t bstrSrc );
+    unsigned long VerifyDetachedSignEx (
+        _bstr_t bstrSignedData,
+        _bstr_t bstrFileNameDetached,
+        _bstr_t bstrFileName );
+    _bstr_t JITGetVersion ( );
+    _bstr_t CreateSignedEnvelopEx (
+        _bstr_t bstrSignCertDN,
+        _bstr_t bstrEncCertDN,
+        _bstr_t bstrFileName,
+        _bstr_t bstrFileNameOut );
+    unsigned long VerifySignedEnvelopEx (
+        _bstr_t bstrEvpFile );
+    unsigned long JITAttachFromFile_BigData (
+        _bstr_t bstrCertDN,
+        _bstr_t bstrSrcFileName,
+        _bstr_t bstrOutFileName );
+    unsigned long JITDetachFromFile_BigData (
+        _bstr_t bstrCertDN,
+        _bstr_t bstrSrcFileName,
+        _bstr_t bstrOutFileName );
+    unsigned long JITCreateEnvelopeFromFile_BigData (
+        _bstr_t bstrCertDN,
+        _bstr_t bstrSrcFileName,
+        _bstr_t bstrOutFileName );
+    unsigned long JITSignEnvelopeFromFile_BigData (
+        _bstr_t bstrSignCertDN,
+        _bstr_t bstrEncCertDN,
+        _bstr_t bstrSrcFileName,
+        _bstr_t bstrOutFileName );
+    unsigned long JITDecryptEnvelopeFromFile_BigData (
+        _bstr_t bstrInFileName,
+        _bstr_t bstrOutFilePath );
+    unsigned long JITDecryptSignEnvelopeFromFile_BigData (
+        _bstr_t bstrInFileName,
+        _bstr_t bstrOutFilePath );
+    unsigned long JITVerifyAttachFromFile_BigData (
+        _bstr_t bstrInFileName,
+        _bstr_t bstrOutFilePath );
+    unsigned long JITVerifyDetachFromFile_BigData (
+        _bstr_t bstrSrcFileName,
+        _bstr_t bstrSignFileName );
+    _bstr_t Digest (
+        _bstr_t bstrSrcData );
+    _bstr_t DigestFromFile (
+        _bstr_t bstrSrcFileName );
+    _bstr_t SymmetricEncrypt (
+        _bstr_t bstrSymmetricKey,
+        _bstr_t bstrSrcData,
+        unsigned short isPad );
+    _bstr_t SymmetricDecrypt (
+        _bstr_t bstrSymmetricKey,
+        _bstr_t bstrEncryptData,
+        unsigned short isPad );
+    unsigned long SymmetricEncryptFromFile (
+        _bstr_t bstrSymmetricKey,
+        _bstr_t bstrSrcFileName,
+        _bstr_t bstrEncryptFileName,
+        unsigned short isPad );
+    unsigned long SymmetricDecryptFromFile (
+        _bstr_t bstrSymmetricKey,
+        _bstr_t bstrEncryptFileName,
+        _bstr_t bstrSrcFileName,
+        unsigned short isPad );
+    _bstr_t CreateEvpWithOutData_SplitBigData (
+        _bstr_t bstrDN,
+        _bstr_t bstrFileName,
+        _bstr_t bstrFileNameOut );
+    unsigned long DecryptEvpWithOutData_SplitBigData (
+        _bstr_t bstrFileName,
+        _bstr_t bstrEvpDataB64,
+        _bstr_t bstrSrcFilePath );
+    _bstr_t EnvelopConversion (
+        _bstr_t bstrDN,
+        _bstr_t bstrEnvelopDataBase64 );
+    unsigned long SetRecipients (
+        short isRecipients );
+    _bstr_t SignedData_SignerInfos (
+        _bstr_t bstrSignDataBase64A,
+        _bstr_t bstrSignDataBase64B );
+    unsigned long RenameFile (
+        _bstr_t bstrOldFileName,
+        _bstr_t bstrNewFileName );
+    unsigned long SetCertByPFX (
+        _bstr_t bstrCertType,
+        _bstr_t bstrPFXCertPath,
+        _bstr_t bstrPassword );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Initialize (
+        /*[in]*/ BSTR bstrAuxParam,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_Finalize (
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCertEx (
+        /*[in]*/ BSTR bstrCertStoreType,
+        /*[in]*/ BSTR bstrCertType,
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrSN,
+        /*[in]*/ BSTR bstrEmail,
+        /*[in]*/ BSTR bstrDNIssuer,
+        /*[in]*/ BSTR bstrCertBase64,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCert (
+        /*[in]*/ BSTR bstrCertType,
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrSN,
+        /*[in]*/ BSTR bstrEmail,
+        /*[in]*/ BSTR bstrDNIssuer,
+        /*[in]*/ BSTR bstrCertBase64,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetAlgorithm (
+        /*[in]*/ BSTR bstrHashAlg,
+        /*[in]*/ BSTR bstrEncAlg,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCertChooseType (
+        /*[in]*/ long nType,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_GetErrorCode (
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_GetErrorMessage (
+        /*[in]*/ unsigned long lErrorCode,
+        /*[out,retval]*/ BSTR * pErrorMessage ) = 0;
+      virtual HRESULT __stdcall raw_P1Sign (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_P1SignStr (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrSrc,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_AttachSign (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_AttachSignStr (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrSrc,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_DetachSign (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_DetachSignStr (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrSrc,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_GetCertInfo (
+        /*[in]*/ BSTR bstrCertType,
+        /*[in]*/ long lInfoType,
+        /*[in]*/ BSTR bstrOID,
+        /*[out,retval]*/ BSTR * pRetCerInfo ) = 0;
+      virtual HRESULT __stdcall raw_EncryptEnvelop (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ BSTR * pRetValue ) = 0;
+      virtual HRESULT __stdcall raw_EncryptEnvelopStr (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrSrc,
+        /*[out,retval]*/ BSTR * pRetValue ) = 0;
+      virtual HRESULT __stdcall raw_DecryptEnvelop (
+        /*[in]*/ BSTR bstrEnvelop,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_GetData (
+        /*[out,retval]*/ BSTR * pbstrBase64Data ) = 0;
+      virtual HRESULT __stdcall raw_GetDataEx (
+        /*[out]*/ unsigned char * pszSrcData,
+        /*[in,out]*/ unsigned long * plSrcDataLen,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_GetCertListEx (
+        /*[in]*/ BSTR bstrCertStoreType,
+        /*[in]*/ BSTR bstrCertType,
+        /*[in]*/ BSTR bstrCertDN,
+        /*[in]*/ BSTR bstrCertSN,
+        /*[in]*/ BSTR bstrCertEmail,
+        /*[in]*/ BSTR bstrCertIssuerDN,
+        /*[in]*/ long lInfoType,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall raw_GetCertList (
+        /*[in]*/ BSTR bstrCertType,
+        /*[in]*/ BSTR bstrCertDN,
+        /*[in]*/ BSTR bstrCertSN,
+        /*[in]*/ BSTR bstrCertEmail,
+        /*[in]*/ BSTR bstrCertIssuerDN,
+        /*[in]*/ long lInfoType,
+        /*[out,retval]*/ BSTR * pbstrResult ) = 0;
+      virtual HRESULT __stdcall raw_AttachSignEx (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrFileName,
+        /*[in]*/ BSTR bstrFileNameOut,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_DetachSignEx (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrFileName,
+        /*[in]*/ BSTR bstrFileNameOut,
+        /*[out,retval]*/ BSTR * pbstrSignedData ) = 0;
+      virtual HRESULT __stdcall raw_SetFileNameUseUTF8 (
+        /*[in]*/ short isUTF8,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_ChangeCertDN (
+        /*[in]*/ BSTR bstrCertDN,
+        /*[in]*/ unsigned short usChangeFlag,
+        /*[out,retval]*/ BSTR * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetBlockSize (
+        /*[in]*/ unsigned long lBlockSize,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_GetBase64Encode (
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ BSTR * pbstrBase64Data ) = 0;
+      virtual HRESULT __stdcall raw_GetBase64Decode (
+        /*[in]*/ BSTR bstrBase64Data,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in,out]*/ unsigned long * pSrcDataLen,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCSP (
+        /*[in]*/ BSTR bstrProvider,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_EncryptEnvelopEx (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrFileName,
+        /*[in]*/ BSTR bstrFileNameOut,
+        /*[out,retval]*/ BSTR * pRetValue ) = 0;
+      virtual HRESULT __stdcall raw_DecryptEnvelopEx (
+        /*[in]*/ BSTR bstrFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_GetFile (
+        /*[in]*/ BSTR bstrFileSavePath,
+        /*[out,retval]*/ BSTR * pbstrFileName ) = 0;
+      virtual HRESULT __stdcall raw_VerifyAttachedSign (
+        /*[in]*/ BSTR bstrSignedData,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_VerifyAttachedSignEx (
+        /*[in]*/ BSTR bstrFileNameAttached,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_CreateSignedEnvelop (
+        /*[in]*/ BSTR bstrSignCertDN,
+        /*[in]*/ BSTR bstrEncCertDN,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ BSTR * pRetValue ) = 0;
+      virtual HRESULT __stdcall raw_CreateSignedEnvelopStr (
+        /*[in]*/ BSTR bstrSignCertDN,
+        /*[in]*/ BSTR bstrEncCertDN,
+        /*[in]*/ BSTR bstrSrc,
+        /*[out,retval]*/ BSTR * pRetValue ) = 0;
+      virtual HRESULT __stdcall raw_VerifySignedEnvelop (
+        /*[in]*/ BSTR bstrEnvelop,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_VerifyDetachedSign (
+        /*[in]*/ BSTR bstrSignedData,
+        /*[in]*/ unsigned char * pszSrcData,
+        /*[in]*/ unsigned long lSrcDataLen,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_VerifyDetachedSignStr (
+        /*[in]*/ BSTR bstrSignedData,
+        /*[in]*/ BSTR bstrSrc,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_VerifyDetachedSignEx (
+        /*[in]*/ BSTR bstrSignedData,
+        /*[in]*/ BSTR bstrFileNameDetached,
+        /*[in]*/ BSTR bstrFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITGetVersion (
+        /*[out,retval]*/ BSTR * pbstrVersion ) = 0;
+      virtual HRESULT __stdcall raw_CreateSignedEnvelopEx (
+        /*[in]*/ BSTR bstrSignCertDN,
+        /*[in]*/ BSTR bstrEncCertDN,
+        /*[in]*/ BSTR bstrFileName,
+        /*[in]*/ BSTR bstrFileNameOut,
+        /*[out,retval]*/ BSTR * pRetValue ) = 0;
+      virtual HRESULT __stdcall raw_VerifySignedEnvelopEx (
+        /*[in]*/ BSTR bstrEvpFile,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITAttachFromFile_BigData (
+        /*[in]*/ BSTR bstrCertDN,
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ BSTR bstrOutFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITDetachFromFile_BigData (
+        /*[in]*/ BSTR bstrCertDN,
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ BSTR bstrOutFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITCreateEnvelopeFromFile_BigData (
+        /*[in]*/ BSTR bstrCertDN,
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ BSTR bstrOutFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITSignEnvelopeFromFile_BigData (
+        /*[in]*/ BSTR bstrSignCertDN,
+        /*[in]*/ BSTR bstrEncCertDN,
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ BSTR bstrOutFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITDecryptEnvelopeFromFile_BigData (
+        /*[in]*/ BSTR bstrInFileName,
+        /*[in]*/ BSTR bstrOutFilePath,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITDecryptSignEnvelopeFromFile_BigData (
+        /*[in]*/ BSTR bstrInFileName,
+        /*[in]*/ BSTR bstrOutFilePath,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITVerifyAttachFromFile_BigData (
+        /*[in]*/ BSTR bstrInFileName,
+        /*[in]*/ BSTR bstrOutFilePath,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_JITVerifyDetachFromFile_BigData (
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ BSTR bstrSignFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_Digest (
+        /*[in]*/ BSTR bstrSrcData,
+        /*[out,retval]*/ BSTR * pbstrHashData ) = 0;
+      virtual HRESULT __stdcall raw_DigestFromFile (
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[out,retval]*/ BSTR * pbstrHashData ) = 0;
+      virtual HRESULT __stdcall raw_SymmetricEncrypt (
+        /*[in]*/ BSTR bstrSymmetricKey,
+        /*[in]*/ BSTR bstrSrcData,
+        /*[in]*/ unsigned short isPad,
+        /*[out,retval]*/ BSTR * pbstrEncryptData ) = 0;
+      virtual HRESULT __stdcall raw_SymmetricDecrypt (
+        /*[in]*/ BSTR bstrSymmetricKey,
+        /*[in]*/ BSTR bstrEncryptData,
+        /*[in]*/ unsigned short isPad,
+        /*[out,retval]*/ BSTR * pbstrSrcData ) = 0;
+      virtual HRESULT __stdcall raw_SymmetricEncryptFromFile (
+        /*[in]*/ BSTR bstrSymmetricKey,
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ BSTR bstrEncryptFileName,
+        /*[in]*/ unsigned short isPad,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SymmetricDecryptFromFile (
+        /*[in]*/ BSTR bstrSymmetricKey,
+        /*[in]*/ BSTR bstrEncryptFileName,
+        /*[in]*/ BSTR bstrSrcFileName,
+        /*[in]*/ unsigned short isPad,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_CreateEvpWithOutData_SplitBigData (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrFileName,
+        /*[in]*/ BSTR bstrFileNameOut,
+        /*[out,retval]*/ BSTR * pbstrEvpDataB64 ) = 0;
+      virtual HRESULT __stdcall raw_DecryptEvpWithOutData_SplitBigData (
+        /*[in]*/ BSTR bstrFileName,
+        /*[in]*/ BSTR bstrEvpDataB64,
+        /*[in]*/ BSTR bstrSrcFilePath,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_EnvelopConversion (
+        /*[in]*/ BSTR bstrDN,
+        /*[in]*/ BSTR bstrEnvelopDataBase64,
+        /*[out,retval]*/ BSTR * pbstrEnvelopedDataBase64 ) = 0;
+      virtual HRESULT __stdcall raw_SetRecipients (
+        /*[in]*/ short isRecipients,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SignedData_SignerInfos (
+        /*[in]*/ BSTR bstrSignDataBase64A,
+        /*[in]*/ BSTR bstrSignDataBase64B,
+        /*[out,retval]*/ BSTR * pbstrSignDataBase64 ) = 0;
+      virtual HRESULT __stdcall raw_RenameFile (
+        /*[in]*/ BSTR bstrOldFileName,
+        /*[in]*/ BSTR bstrNewFileName,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+      virtual HRESULT __stdcall raw_SetCertByPFX (
+        /*[in]*/ BSTR bstrCertType,
+        /*[in]*/ BSTR bstrPFXCertPath,
+        /*[in]*/ BSTR bstrPassword,
+        /*[out,retval]*/ unsigned long * pRetVal ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "e:\workspace\hf-soft\safethrough\debug\jitcomvctk_s.tli"
+
+} // namespace JITComVCTKExLib
+
+#pragma pack(pop)

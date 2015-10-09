@@ -1,0 +1,467 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (4dca638c).
+//
+// e:\workspace\hf-soft\safethrough\debug\jitcomvctk_s.tli
+//
+// Wrapper implementations for Win32 type library JITComVCTK_S.dll
+// compiler-generated file created 09/09/15 at 21:14:46 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IJITVCTKEx wrapper method implementations
+//
+
+inline unsigned long IJITVCTKEx::Initialize ( _bstr_t bstrAuxParam ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_Initialize(bstrAuxParam, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::Finalize ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_Finalize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SetCertEx ( _bstr_t bstrCertStoreType, _bstr_t bstrCertType, _bstr_t bstrDN, _bstr_t bstrSN, _bstr_t bstrEmail, _bstr_t bstrDNIssuer, _bstr_t bstrCertBase64 ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetCertEx(bstrCertStoreType, bstrCertType, bstrDN, bstrSN, bstrEmail, bstrDNIssuer, bstrCertBase64, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SetCert ( _bstr_t bstrCertType, _bstr_t bstrDN, _bstr_t bstrSN, _bstr_t bstrEmail, _bstr_t bstrDNIssuer, _bstr_t bstrCertBase64 ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetCert(bstrCertType, bstrDN, bstrSN, bstrEmail, bstrDNIssuer, bstrCertBase64, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SetAlgorithm ( _bstr_t bstrHashAlg, _bstr_t bstrEncAlg ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetAlgorithm(bstrHashAlg, bstrEncAlg, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SetCertChooseType ( long nType ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetCertChooseType(nType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::GetErrorCode ( ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_GetErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::GetErrorMessage ( unsigned long lErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetErrorMessage(lErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::P1Sign ( _bstr_t bstrDN, unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_P1Sign(bstrDN, pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::P1SignStr ( _bstr_t bstrDN, _bstr_t bstrSrc ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_P1SignStr(bstrDN, bstrSrc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::AttachSign ( _bstr_t bstrDN, unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AttachSign(bstrDN, pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::AttachSignStr ( _bstr_t bstrDN, _bstr_t bstrSrc ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AttachSignStr(bstrDN, bstrSrc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::DetachSign ( _bstr_t bstrDN, unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_DetachSign(bstrDN, pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::DetachSignStr ( _bstr_t bstrDN, _bstr_t bstrSrc ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_DetachSignStr(bstrDN, bstrSrc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::GetCertInfo ( _bstr_t bstrCertType, long lInfoType, _bstr_t bstrOID ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetCertInfo(bstrCertType, lInfoType, bstrOID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::EncryptEnvelop ( _bstr_t bstrDN, unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_EncryptEnvelop(bstrDN, pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::EncryptEnvelopStr ( _bstr_t bstrDN, _bstr_t bstrSrc ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_EncryptEnvelopStr(bstrDN, bstrSrc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::DecryptEnvelop ( _bstr_t bstrEnvelop ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_DecryptEnvelop(bstrEnvelop, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::GetData ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::GetDataEx ( unsigned char * pszSrcData, unsigned long * plSrcDataLen ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_GetDataEx(pszSrcData, plSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::GetCertListEx ( _bstr_t bstrCertStoreType, _bstr_t bstrCertType, _bstr_t bstrCertDN, _bstr_t bstrCertSN, _bstr_t bstrCertEmail, _bstr_t bstrCertIssuerDN, long lInfoType ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetCertListEx(bstrCertStoreType, bstrCertType, bstrCertDN, bstrCertSN, bstrCertEmail, bstrCertIssuerDN, lInfoType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::GetCertList ( _bstr_t bstrCertType, _bstr_t bstrCertDN, _bstr_t bstrCertSN, _bstr_t bstrCertEmail, _bstr_t bstrCertIssuerDN, long lInfoType ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetCertList(bstrCertType, bstrCertDN, bstrCertSN, bstrCertEmail, bstrCertIssuerDN, lInfoType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::AttachSignEx ( _bstr_t bstrDN, _bstr_t bstrFileName, _bstr_t bstrFileNameOut ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_AttachSignEx(bstrDN, bstrFileName, bstrFileNameOut, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::DetachSignEx ( _bstr_t bstrDN, _bstr_t bstrFileName, _bstr_t bstrFileNameOut ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_DetachSignEx(bstrDN, bstrFileName, bstrFileNameOut, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::SetFileNameUseUTF8 ( short isUTF8 ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetFileNameUseUTF8(isUTF8, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::ChangeCertDN ( _bstr_t bstrCertDN, unsigned short usChangeFlag ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_ChangeCertDN(bstrCertDN, usChangeFlag, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::SetBlockSize ( unsigned long lBlockSize ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetBlockSize(lBlockSize, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::GetBase64Encode ( unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetBase64Encode(pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::GetBase64Decode ( _bstr_t bstrBase64Data, unsigned char * pszSrcData, unsigned long * pSrcDataLen ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_GetBase64Decode(bstrBase64Data, pszSrcData, pSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SetCSP ( _bstr_t bstrProvider ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetCSP(bstrProvider, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::EncryptEnvelopEx ( _bstr_t bstrDN, _bstr_t bstrFileName, _bstr_t bstrFileNameOut ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_EncryptEnvelopEx(bstrDN, bstrFileName, bstrFileNameOut, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::DecryptEnvelopEx ( _bstr_t bstrFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_DecryptEnvelopEx(bstrFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::GetFile ( _bstr_t bstrFileSavePath ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetFile(bstrFileSavePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::VerifyAttachedSign ( _bstr_t bstrSignedData ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifyAttachedSign(bstrSignedData, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::VerifyAttachedSignEx ( _bstr_t bstrFileNameAttached ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifyAttachedSignEx(bstrFileNameAttached, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::CreateSignedEnvelop ( _bstr_t bstrSignCertDN, _bstr_t bstrEncCertDN, unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_CreateSignedEnvelop(bstrSignCertDN, bstrEncCertDN, pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::CreateSignedEnvelopStr ( _bstr_t bstrSignCertDN, _bstr_t bstrEncCertDN, _bstr_t bstrSrc ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_CreateSignedEnvelopStr(bstrSignCertDN, bstrEncCertDN, bstrSrc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::VerifySignedEnvelop ( _bstr_t bstrEnvelop ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifySignedEnvelop(bstrEnvelop, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::VerifyDetachedSign ( _bstr_t bstrSignedData, unsigned char * pszSrcData, unsigned long lSrcDataLen ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifyDetachedSign(bstrSignedData, pszSrcData, lSrcDataLen, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::VerifyDetachedSignStr ( _bstr_t bstrSignedData, _bstr_t bstrSrc ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifyDetachedSignStr(bstrSignedData, bstrSrc, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::VerifyDetachedSignEx ( _bstr_t bstrSignedData, _bstr_t bstrFileNameDetached, _bstr_t bstrFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifyDetachedSignEx(bstrSignedData, bstrFileNameDetached, bstrFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::JITGetVersion ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_JITGetVersion(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::CreateSignedEnvelopEx ( _bstr_t bstrSignCertDN, _bstr_t bstrEncCertDN, _bstr_t bstrFileName, _bstr_t bstrFileNameOut ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_CreateSignedEnvelopEx(bstrSignCertDN, bstrEncCertDN, bstrFileName, bstrFileNameOut, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::VerifySignedEnvelopEx ( _bstr_t bstrEvpFile ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_VerifySignedEnvelopEx(bstrEvpFile, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITAttachFromFile_BigData ( _bstr_t bstrCertDN, _bstr_t bstrSrcFileName, _bstr_t bstrOutFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITAttachFromFile_BigData(bstrCertDN, bstrSrcFileName, bstrOutFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITDetachFromFile_BigData ( _bstr_t bstrCertDN, _bstr_t bstrSrcFileName, _bstr_t bstrOutFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITDetachFromFile_BigData(bstrCertDN, bstrSrcFileName, bstrOutFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITCreateEnvelopeFromFile_BigData ( _bstr_t bstrCertDN, _bstr_t bstrSrcFileName, _bstr_t bstrOutFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITCreateEnvelopeFromFile_BigData(bstrCertDN, bstrSrcFileName, bstrOutFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITSignEnvelopeFromFile_BigData ( _bstr_t bstrSignCertDN, _bstr_t bstrEncCertDN, _bstr_t bstrSrcFileName, _bstr_t bstrOutFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITSignEnvelopeFromFile_BigData(bstrSignCertDN, bstrEncCertDN, bstrSrcFileName, bstrOutFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITDecryptEnvelopeFromFile_BigData ( _bstr_t bstrInFileName, _bstr_t bstrOutFilePath ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITDecryptEnvelopeFromFile_BigData(bstrInFileName, bstrOutFilePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITDecryptSignEnvelopeFromFile_BigData ( _bstr_t bstrInFileName, _bstr_t bstrOutFilePath ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITDecryptSignEnvelopeFromFile_BigData(bstrInFileName, bstrOutFilePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITVerifyAttachFromFile_BigData ( _bstr_t bstrInFileName, _bstr_t bstrOutFilePath ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITVerifyAttachFromFile_BigData(bstrInFileName, bstrOutFilePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::JITVerifyDetachFromFile_BigData ( _bstr_t bstrSrcFileName, _bstr_t bstrSignFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_JITVerifyDetachFromFile_BigData(bstrSrcFileName, bstrSignFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::Digest ( _bstr_t bstrSrcData ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_Digest(bstrSrcData, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::DigestFromFile ( _bstr_t bstrSrcFileName ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_DigestFromFile(bstrSrcFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::SymmetricEncrypt ( _bstr_t bstrSymmetricKey, _bstr_t bstrSrcData, unsigned short isPad ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_SymmetricEncrypt(bstrSymmetricKey, bstrSrcData, isPad, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IJITVCTKEx::SymmetricDecrypt ( _bstr_t bstrSymmetricKey, _bstr_t bstrEncryptData, unsigned short isPad ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_SymmetricDecrypt(bstrSymmetricKey, bstrEncryptData, isPad, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::SymmetricEncryptFromFile ( _bstr_t bstrSymmetricKey, _bstr_t bstrSrcFileName, _bstr_t bstrEncryptFileName, unsigned short isPad ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SymmetricEncryptFromFile(bstrSymmetricKey, bstrSrcFileName, bstrEncryptFileName, isPad, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SymmetricDecryptFromFile ( _bstr_t bstrSymmetricKey, _bstr_t bstrEncryptFileName, _bstr_t bstrSrcFileName, unsigned short isPad ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SymmetricDecryptFromFile(bstrSymmetricKey, bstrEncryptFileName, bstrSrcFileName, isPad, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::CreateEvpWithOutData_SplitBigData ( _bstr_t bstrDN, _bstr_t bstrFileName, _bstr_t bstrFileNameOut ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_CreateEvpWithOutData_SplitBigData(bstrDN, bstrFileName, bstrFileNameOut, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::DecryptEvpWithOutData_SplitBigData ( _bstr_t bstrFileName, _bstr_t bstrEvpDataB64, _bstr_t bstrSrcFilePath ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_DecryptEvpWithOutData_SplitBigData(bstrFileName, bstrEvpDataB64, bstrSrcFilePath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::EnvelopConversion ( _bstr_t bstrDN, _bstr_t bstrEnvelopDataBase64 ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_EnvelopConversion(bstrDN, bstrEnvelopDataBase64, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::SetRecipients ( short isRecipients ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetRecipients(isRecipients, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IJITVCTKEx::SignedData_SignerInfos ( _bstr_t bstrSignDataBase64A, _bstr_t bstrSignDataBase64B ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_SignedData_SignerInfos(bstrSignDataBase64A, bstrSignDataBase64B, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline unsigned long IJITVCTKEx::RenameFile ( _bstr_t bstrOldFileName, _bstr_t bstrNewFileName ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_RenameFile(bstrOldFileName, bstrNewFileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline unsigned long IJITVCTKEx::SetCertByPFX ( _bstr_t bstrCertType, _bstr_t bstrPFXCertPath, _bstr_t bstrPassword ) {
+    unsigned long _result = 0;
+    HRESULT _hr = raw_SetCertByPFX(bstrCertType, bstrPFXCertPath, bstrPassword, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
