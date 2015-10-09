@@ -8,9 +8,11 @@
 #define RUN_SUCCESS  -1
 #define RUN_FAIL     1
 
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    //后方软件
     QApplication::setApplicationName("Safe");
     QApplication::setOrganizationName("hf");
     QApplication::setQuitOnLastWindowClosed(false);
